@@ -12,6 +12,11 @@ WhisperPen is a command-line tool that leverages speech recognition and AI to co
    - Convert speech to text accurately
    - Support Chinese language input
    - Translate to English
+   - Support wake word detection
+     - Wake word: "小王小王"
+     - Background listening
+     - Low resource usage
+     - Quick response time
 
 2. AI Enhancement
    - Use local Ollama platform
@@ -65,6 +70,15 @@ WhisperPen is a command-line tool that leverages speech recognition and AI to co
            # Configure clipboard
    ```
 
+4. Wake Word Detector (`wake_detector.py`)
+   ```python
+   class WakeDetector:
+       def __init__(self):
+           # Initialize PocketSphinx
+           # Configure wake word model
+           # Setup background listening
+   ```
+
 ### Processing Pipeline
 1. Audio Capture
    - Sample rate: 44100Hz
@@ -75,7 +89,19 @@ WhisperPen is a command-line tool that leverages speech recognition and AI to co
    - Volume normalization: Required
    - Signal-to-noise ratio: Needs improvement
 
-2. Speech Recognition
+2. Wake Word Detection
+   - Engine: PocketSphinx
+   - Wake word: "小王小王"
+   - Mode: Background listening
+   - Resource usage: Minimal
+   - Response time: < 0.5s
+   - States:
+     - Sleeping (waiting for wake word)
+     - Waking (transitioning)
+     - Active (listening for commands)
+     - Processing (handling input)
+
+3. Speech Recognition
    - Model: OpenAI Whisper base
    - Model size: Upgrade to medium/large for better accuracy
    - Language: Chinese
@@ -95,13 +121,13 @@ WhisperPen is a command-line tool that leverages speech recognition and AI to co
      - Parallel processing
      - GPU acceleration if available
 
-3. Text Enhancement
+4. Text Enhancement
    - Model: qwen2.5:32b
    - Task: Translation + Enhancement
    - Context: Professional
    - API: Ollama local deployment
 
-4. Output Management
+5. Output Management
    - Format: Markdown
    - Location: whisperpen.md
    - Clipboard: Automatic
