@@ -43,7 +43,10 @@ ollama pull qwen2.5:32b
 # 单次识别
 python -m src.main
 
-# 持续监听
+# 后台监听模式（使用唤醒词"小王小王"）
+python -m src.main -b
+
+# 持续监听模式
 python -m src.main -c
 ```
 

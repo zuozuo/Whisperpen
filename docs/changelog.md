@@ -252,3 +252,47 @@ All notable changes to WhisperPen will be documented in this file.
   - Added proper module initialization
   - Fixed module discovery
   - Enhanced import organization
+
+## [0.4.0] - 2024-03-19 19:30
+
+### New Features
+- Added wake word detection
+  - Background listening mode
+  - Wake word: "小王小王"
+  - Low resource usage
+  - Quick response time
+
+### Technical Improvements
+- Added PocketSphinx integration
+- Implemented background processing
+- Added state management
+- Enhanced user feedback
+
+## [0.4.1] - 2024-03-19 20:00
+
+### Technical Changes
+- Changed wake word detection implementation
+  - Switched from PocketSphinx to SpeechRecognition
+  - Using Whisper for wake word detection
+  - Improved reliability and accuracy
+  - Simplified installation process
+
+### Improvements
+- Better background listening
+- More reliable wake word detection
+- Reduced resource usage
+- Easier setup process
+
+## [0.4.2] - 2024-03-19 20:15
+
+### User Interface
+- Added multiple operation modes
+  - Single recognition (default)
+  - Background mode with wake word (-b)
+  - Continuous mode without wake word (-c)
+
+### Improvements
+- Clearer command line options
+- Better mode descriptions
+- Enhanced user guidance
+- Improved help messages
