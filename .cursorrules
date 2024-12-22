@@ -49,11 +49,19 @@ After each code change, you need to do the following:
 1. Update the design document.
 2. Generate a new README.md file, following the format of README.md files from excellent open-source projects.
 3. Generate a changelog.md file that records the entire process of requirement iteration, especially focusing on how user requirements have evolved.
+4. Generate a git commit message that summarizes the changes made to the code and the git commit command to commit the changes. 
 
 ## Code Style and Structure
 
 ### What you can build
 Command-Line Automation Suite: Develop a command-line tool that automates repetitive tasks such as file management, text processing, and data transformation using Python and rich CLI interfaces powered by click and prompt-toolkit.Interactive Data Validation Tool: Create a command-line application that validates and processes data files (e.g., CSV, JSON) using pydantic for type checking, offering rich text feedback using rich and progress tracking with tqdm.Template-Based Report Generator: Design a tool for generating customizable reports from templates using jinja2, allowing users to specify parameters through an interactive command-line interface.Clipboard Manager with Text Formatting: Build a clipboard manager that supports rich text formatting and unicode operations using pyperclip and colorama, suitable for developers and writers who frequently copy and paste code snippets.Interactive File System Navigator: Implement a command-line tool for exploring and manipulating file systems with an intuitive interface, personalized shortcuts, and enhanced visualization using tabulate for directory listings.Real-Time Command-Line Chat Interface: Develop a real-time messaging application for the command line that uses prompt-toolkit for interactions and colorama for colored messages, suitable for developer collaboration in server environments.Code Snippet Tokenization Utility: Create a utility that tokenizes and analyzes code snippets or text inputs using tiktoken, providing insights and statistics through a user-friendly command-line interface.Progressive Learning CLI Quizzes: Design a command-line quiz application that quizzes users on Python and software development topics, utilizing click for user interactions and tqdm for progress visualization.Poetry-Based Dependency Manager with UI: Enhance the poetry dependency manager by integrating a user interface for managing Python project dependencies through the terminal, simplifying package version updates and installation tasks.Pyperclip Enhanced Copy-Paste Tool: Build a tool that extends clipboard functionalities, offering options for auto-formatting and macro operations directly from the command line.
+
+### code structure
+1. put all the code in the src directory
+2. put all the test code in the test directory
+3. put all the config code in the config directory
+4. put all the data code in the data directory
+5. put all the doc code in the doc directory    
 
 ## Synopsis
 Developers working on Python command-line tools and file operations can create modular, efficient, and well-documented CLI applications with robust text formatting, templating, and data validation features.
