@@ -1,7 +1,7 @@
 from rich.console import Console
-from speech_handler import SpeechHandler
-from text_processor import TextProcessor
-from file_handler import FileHandler
+from src.speech_handler import SpeechHandler
+from src.text_processor import TextProcessor
+from src.file_handler import FileHandler
 import click
 
 console = Console()
@@ -36,7 +36,7 @@ def main(continuous: bool):
         console.print(f"[red]程序错误: {str(e)}[/red]")
 
 def process_speech(speech_handler, text_processor, file_handler):
-    """处理单次语音识别"""
+    """处理单次语���识别"""
     # 获取语音输入
     result = speech_handler.record_and_transcribe()
     original_text = result['original']

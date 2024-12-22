@@ -238,3 +238,17 @@ All notable changes to WhisperPen will be documented in this file.
   - Emphasized simplicity
   - Removed verbose instructions
   - Better result extraction
+
+## [0.3.0] - 2024-03-19 19:00
+
+### Bug Fixes
+- Fixed module import issues
+  - Added __init__.py files
+  - Updated import statements
+  - Fixed module paths
+
+### Project Structure
+- Improved Python package structure
+  - Added proper module initialization
+  - Fixed module discovery
+  - Enhanced import organization

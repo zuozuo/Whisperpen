@@ -1,0 +1,1 @@
+"""WhisperPen package.""" 
